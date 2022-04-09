@@ -18,7 +18,7 @@ Este projeto tem como objetivo implementar um modelo de rede neural adversário 
 
 ### Contexto e Motivação
 
-Com o crescimento do poderio computacional nos últimos anos, em especial, das placas de vídeo, o uso e a popularidade de modelos com redes neurais artificiais em tarefas de aprendizado de máquina, como predição, classificação, regressão, dentre outras, aumentou de maneira considerável. 
+Com o crescimento do poderio computacional nos últimos anos, em especial, das placas de vídeo, o uso e a popularidade de modelos com redes neurais artificiais em tarefas de aprendizado de máquina, como predição, classificação, regressão etc., aumentou de maneira considerável. 
 
 Uma arquitetura de rede neural que ficou bastante conhecida foi as rede neural adversária generativa. Apresentada original em 2014 [neste artigo](https://proceedings.neurips.cc/paper/2014/file/5ca3e9b122f61f8f06494c97b1afccf3-Paper.pdf) por Ian Goodfellow e os outros membros do seu grupo de pesquisa, este modelo é capaz de, após um treinamento em um conjunto de dados, gerar novas amostras com os mesmos parâmetros das que foram utilizados para treinar a rede.
 
