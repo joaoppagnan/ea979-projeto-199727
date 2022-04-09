@@ -13,6 +13,13 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 
 
 ## Descrição do Projeto
+
+Este projeto tem como objetivo implementar um modelo de rede neural adversário generativo de forma a estudar esta maneira de se realizar computação gráfica.
+
+### Motivação
+
+
+
 > Descrição do tema do projeto, incluindo contexto gerador, motivação.
 > Descrição do objetivo principal do projeto.
 > Subseções podem ser criadas para organizar o texto.
