@@ -1,17 +1,15 @@
-# `<Título em Português do Projeto>`
-# `<Project Title in in English>`
+# `Computação Gráfica utilizando Redes Neurais Adversárias Generativas`
+# `Computer Graphics with Generative Adversarial Neural Networks`
 
 ## Apresentação
 
 O presente projeto foi originado no contexto das atividades da disciplina de pós-graduação *EA979A - Introdução a Computação Gráfica e Processamento de Imagens*, 
 oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
-> Incluir nome RA e foco de especialização de cada membro do grupo. Os grupos devem ter no máximo três integrantes.
-> |Nome  | RA | Curso|
-> |--|--|--|
-> | Nome1  | 123456  | Eng. de Computação|
-> | Nome2  | 123456  | Física Médica|
-> | Nome3  | 123456  | XXX|
+**Grupo:**
+|Nome  | RA | Curso|
+|--|--|--|
+| João Pedro de Oliveira Pagnan | 199727  | Eng. Elétrica|
 
 
 ## Descrição do Projeto
@@ -39,4 +37,6 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 > Inclua no seu plano de trabalho a etapa de escrita de relatório final do projeto.
 
 ## Referências Bibliográficas
-> Nesta primeira entrega do projeto você já deve apontar as referências bibliográficas iniciais que você adotará no projeto.
+
+1. Géron, A., 2019. Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow: Concepts, tools, and techniques to build intelligent systems. " O'Reilly Media, Inc.".
+
