@@ -16,32 +16,29 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 
 Este projeto tem como objetivo implementar um modelo de rede neural adversário generativo de forma a estudar esta maneira de se realizar computação gráfica.
 
-### Motivação
+### Contexto e Motivação
 
+Com o crescimento do poderio computacional nos últimos anos, em especial, das placas de vídeo, o uso e a popularidade de modelos com redes neurais artificiais em tarefas de aprendizado de máquina, como predição, classificação, regressão, entre outras, aumentou de maneira considerável. 
 
+Uma arquitetura de rede neural que ficou bastante conhecida foram as redes neurais adversárias generativas. Apresentada original em 2014 [neste artigo](https://proceedings.neurips.cc/paper/2014/file/5ca3e9b122f61f8f06494c97b1afccf3-Paper.pdf) por Ian Goodfellow e os outros membros do seu grupo de pesquisa, este modelo é capaz de, após um treinamento em um conjunto de dados, gerar novas amostras com os mesmos parâmetros das que foram utilizados para treinar a rede.
 
-> Descrição do tema do projeto, incluindo contexto gerador, motivação.
-> Descrição do objetivo principal do projeto.
-> Subseções podem ser criadas para organizar o texto.
+Este tipo de rede neural é bastante utilizado, por exemplo, em tarefas de computação gráfica, sendo possível gerar fotos de [rostos humanos](https://thispersondoesnotexist.com/), de [animais](https://thiscatdoesnotexist.com/), de [artes](https://thisartworkdoesnotexist.com/), dentre vários outros exemplos. 
+
+Apesar das redes tradicionalmente funcionarem com um ruído como entrada, a incorporação de atributos retirados do espaço latente da representação interna da rede através de operações aritméticas é capaz de gerar uma imagem com base em uma descrição fornecida pelo usuário do modelo. Desta forma, esta arquitetura de rede neural se encaixa na definição de computação gráfica ao ser uma ferramenta que gera imagens a partir de dados de entrada.
+
+### Objetivo Principal
+
+O objetivo principal deste trabalho é, como o nome já indica, realizar um estudo de como a tarefa de computação gráfica pode ser realizada com esse tipo de rede neural artificial, assim como estudar como as aritméticas no espaço latente podem ser utilizadas para gerar imagens com certas características. 
+
+Neste caso, vale mencionar que, o que será gerado pelo modelo ainda não está definido. Pode ser uma arte, um rosto humano, um animal etc.
 
 ## Plano de Trabalho
-> Nesta primeira entrega, seu grupo deve ser capaz de identificar quais são as etapas necessárias para alcançar o objetivo proposto.
-> Nesta seção, identifique claramente essas etapas, estimando o tempo que o seu grupo gastará em cada uma delas.
-> Por exemplo:
-> * Etapa 1 (1 semana): Estudo de técnicas de segmentação de imagens
-> 
->     Descrição do que será realizado na Etapa 1.
-> * Etapa 2 (1 semana): Obtenção de dados pública de imagens de laranjas
-> 
->     Descrição do que será realizado na Etapa 2.
->     
-> * Etapa 3 (2 semanas): Codificação e Testes.
-> 
->     Descrição do que será realizado na Etapa 3.
->     
-> e assim por diante.
-> 
-> Inclua no seu plano de trabalho a etapa de escrita de relatório final do projeto.
+
+* Etapa 1 (1 semanas): Estudo de redes neurais artificiais adversárias generativas;
+* Etapa 2 (1 semana): Definição do tipo de imagem que será gerada pela rede e procura de bases de dados públicas para serem utilizadas;
+* Etapa 3 (3 semanas): Programação e testes com os modelos;
+* Etapa 4 (1 semana): Análise dos resultados obtidos;
+* Etapa 5 (2 semanas): Escrita do relatório final do projeto.
 
 ## Referências Bibliográficas
 
