@@ -1,5 +1,5 @@
-# `Computação Gráfica utilizando Redes Neurais Adversárias Generativas`
-# `Computer Graphics with Generative Adversarial Neural Networks`
+# Computação Gráfica utilizando Redes Neurais Adversárias Generativas
+## Computer Graphics with Generative Adversarial Neural Networks
 
 ## Apresentação
 
