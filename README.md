@@ -34,7 +34,7 @@ Neste caso, vale mencionar que, o que será gerado pelo modelo ainda não está 
 
 ## Plano de Trabalho
 
-* Etapa 1 (1 semanas): Estudo de redes neurais artificiais adversárias generativas;
+* Etapa 1 (2 semanas): Estudo de redes neurais artificiais adversárias generativas;
 * Etapa 2 (1 semana): Definição do tipo de imagem que será gerada pela rede e procura de bases de dados públicas para serem utilizadas;
 * Etapa 3 (3 semanas): Programação e testes com os modelos;
 * Etapa 4 (1 semana): Análise dos resultados obtidos;
