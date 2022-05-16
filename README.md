@@ -40,6 +40,14 @@ Neste caso, vale mencionar que, o que será gerado pelo modelo ainda não está 
 * Etapa 4 (1 semana): Análise dos resultados obtidos;
 * Etapa 5 (2 semanas): Escrita do relatório final do projeto.
 
+## Atualização - Entrega 2
+
+Depois de uma busca na literatura, foi escolhido utilizar a [EditGAN](https://arxiv.org/pdf/2111.03186.pdf), para implementar este projeto. No caso, esta configuração de rede GAN permite a edição de alguns parâmetros das imagens sendo geradas (características como, caso estiver sendo gerados rostos, a direção para onde os olhos estão olhando, ou a expressão desejada) através de um reconhecimento semântico de um texto fornecido. 
+
+Também foi escolhido gerar imagens de carros por serem mais simples que rostos. 
+
+Infelizmente, ainda não foi possível iniciar a implementação do código desta configuração de GAN. Por sorte, o código utilizado pelos autores do artigo está no **Github** e a implementação foi feita em **Python** utilizando a biblioteca **PyTorch**.
+
 ## Referências Bibliográficas
 
 1. Géron, A., 2019. Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow: Concepts, tools, and techniques to build intelligent systems. " O'Reilly Media, Inc.".
