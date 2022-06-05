@@ -16,6 +16,7 @@ RUN ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt install python3.9 -y
 RUN python3.9 -m pip install --upgrade pip
 RUN pip3 install --trusted-host pypi.python.org -r requirements.txt
+RUN pip3 install scikit-image
 
 # latex font in matplotlib images
 RUN apt install texlive dvipng texlive-latex-extra texlive-fonts-recommended ghostscript cm-super -y
