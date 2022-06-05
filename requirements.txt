@@ -19,8 +19,8 @@ scipy==1.6.3
 scikit-learn==0.24.1
 seaborn==0.11.2
 tabulate==0.8.9
-torch==1.10.0a0+3fd9dcf
-torchvision==0.11.0a0
+torch==1.10.0
+torchvision==0.11.0
 tqdm==4.62.1
 Sphinx==1.8.6
 wrapt==1.12.1
