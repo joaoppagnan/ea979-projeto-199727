@@ -48,6 +48,12 @@ Também foi escolhido gerar imagens de carros por serem mais simples que rostos.
 
 Infelizmente, ainda não foi possível iniciar a implementação do código desta configuração de GAN. Por sorte, o código utilizado pelos autores do artigo está no **Github** e a implementação foi feita em **Python** utilizando a biblioteca **PyTorch**.
 
+## Atualizações - Entrega 3
+
+Houveram algumas atualizações entre a etapa 2 e a etapa 3:
+1. As tentativas iniciais de implementar a EditGAN não deram certo, mesmo com os pesos pré-treinados. Devido a isso, optou-se por implementar a StyleGAN;
+
+
 ## Referências Bibliográficas
 
 1. Géron, A., 2019. Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow: Concepts, tools, and techniques to build intelligent systems. " O'Reilly Media, Inc.".
