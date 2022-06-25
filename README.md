@@ -51,7 +51,7 @@ Infelizmente, ainda não foi possível iniciar a implementação do código dest
 ## Atualizações - Entrega 3
 
 Houveram algumas atualizações entre a etapa 2 e a etapa 3:
-1. As tentativas iniciais de implementar a EditGAN não deram certo, mesmo com os pesos pré-treinados. Devido a isso, optou-se por implementar a StyleGAN;
+1. As tentativas iniciais de implementar a EditGAN não deram certo, mesmo com os pesos dos modelos pré-treinados. Devido a isso, optou-se por implementar a StyleGAN;
 
 
 ## Referências Bibliográficas
