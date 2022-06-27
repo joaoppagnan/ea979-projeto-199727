@@ -1,13 +1,13 @@
-import numpy as np
 import torch
+import torch.nn as nn
+from upscalelayer import Upscale2DLayer
 
-class Conv2DLayer(torch.nn.Module):
-    """Conv layer with equalized learning rate and custom learning rate multiplier."""
+class Conv2DLayer(nn.Module):
     def __init__(self, input_channels, output_channels, kernel_size, gain=2**(0.5), use_wscale=False, lrmul=1, bias=True,
                 intermediate=None, upscale=False):
         super().__init__()
         if upscale:
-            self.upscale = Upscale2d()
+            self.upscale = Upscale2DLayer()
         else:
             self.upscale = None
         he_std = gain * (input_channels * kernel_size ** 2) ** (-0.5) # He init
@@ -18,9 +18,9 @@ class Conv2DLayer(torch.nn.Module):
         else:
             init_std = he_std / lrmul
             self.w_mul = lrmul
-        self.weight = torch.nn.Parameter(torch.randn(output_channels, input_channels, kernel_size, kernel_size) * init_std)
+        self.weight = nn.Parameter(torch.randn(output_channels, input_channels, kernel_size, kernel_size) * init_std)
         if bias:
-            self.bias = torch.nn.Parameter(torch.zeros(output_channels))
+            self.bias = nn.Parameter(torch.zeros(output_channels))
             self.b_mul = lrmul
         else:
             self.bias = None
@@ -46,9 +46,9 @@ class Conv2DLayer(torch.nn.Module):
             x = self.upscale(x)
     
         if not have_convolution and self.intermediate is None:
-            return torch.nn.functional.conv2d(x, self.weight * self.w_mul, bias, padding=self.kernel_size//2)
+            return nn.functional.conv2d(x, self.weight * self.w_mul, bias, padding=self.kernel_size//2)
         elif not have_convolution:
-            x = torch.nn.functional.conv2d(x, self.weight * self.w_mul, None, padding=self.kernel_size//2)
+            x = nn.functional.conv2d(x, self.weight * self.w_mul, None, padding=self.kernel_size//2)
         
         if self.intermediate is not None:
             x = self.intermediate(x)

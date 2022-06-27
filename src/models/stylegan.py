@@ -8,6 +8,3 @@ from layers.upscalelayer import Upscale2DLayer
 
 class StyleGAN2():
     pass
-
-
-

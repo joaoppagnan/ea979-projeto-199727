@@ -1,11 +1,11 @@
-import numpy as np
 import torch
+import torch.nn as nn
 
 class NoiseLayer(nn.Module):
     """adds noise. noise is per pixel (constant over channels) with per-channel weight"""
     def __init__(self, channels):
         super().__init__()
-        self.weight = torch.nn.Parameter(torch.zeros(channels))
+        self.weight = nn.Parameter(torch.zeros(channels))
         self.noise = None
     
     def forward(self, x, noise=None):

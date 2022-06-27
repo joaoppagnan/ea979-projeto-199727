@@ -1,5 +1,5 @@
-import numpy as np
 import torch
+import torch.nn as nn
 
 class LinearLayer(torch.nn.Module):
     def __init__(self, input_size:int, output_size:int, gain:float=2**(0.5), use_wscale:bool=False, lrmul:float=1, bias:bool=True):
@@ -11,9 +11,9 @@ class LinearLayer(torch.nn.Module):
         else:
             init_std = he_std / lrmul
             self.w_mul = lrmul
-        self.weight = torch.nn.Parameter(torch.randn(output_size, input_size) * init_std)
+        self.weight = nn.Parameter(torch.randn(output_size, input_size) * init_std)
         if bias:
-            self.bias = torch.nn.Parameter(torch.zeros(output_size))
+            self.bias = nn.Parameter(torch.zeros(output_size))
             self.b_mul = lrmul
         else:
             self.bias = None
@@ -22,4 +22,4 @@ class LinearLayer(torch.nn.Module):
         bias = self.bias
         if bias is not None:
             bias = bias * self.b_mul
-        return torch.nn.functional.linear(x, self.weight * self.w_mul, bias)
+        return nn.functional.linear(x, self.weight * self.w_mul, bias)
