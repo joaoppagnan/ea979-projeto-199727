@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-class MyConv2d(torch.nn.Module):
+class Conv2DLayer(torch.nn.Module):
     """Conv layer with equalized learning rate and custom learning rate multiplier."""
     def __init__(self, input_channels, output_channels, kernel_size, gain=2**(0.5), use_wscale=False, lrmul=1, bias=True,
                 intermediate=None, upscale=False):

@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-class Upscale2D(torch.nn.Module):
+class Upscale2DLayer(torch.nn.Module):
     def __init__(self, factor=2, gain=1):
         super().__init__()
         assert isinstance(factor, int) and factor >= 1
