@@ -33,11 +33,8 @@ class Conv2DLayer(nn.Module):
         
         have_convolution = False
         if self.upscale is not None and min(x.shape[2:]) * 2 >= 128:
-            # this is the fused upscale + conv from StyleGAN, sadly this seems incompatible with the non-fused way
-            # this really needs to be cleaned up and go into the conv...
             w = self.weight * self.w_mul
             w = w.permute(1, 0, 2, 3)
-            # probably applying a conv on w would be more efficient. also this quadruples the weight (average)?!
             w = F.pad(w, (1,1,1,1))
             w = w[:, :, 1:, 1:]+ w[:, :, :-1, 1:] + w[:, :, 1:, :-1] + w[:, :, :-1, :-1]
             x = F.conv_transpose2d(x, w, stride=2, padding=(w.size(-1)-1)//2)
