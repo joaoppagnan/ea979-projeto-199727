@@ -1,9 +1,9 @@
 from src.layers.linear_layer import LinearLayer
 import torch.nn as nn
 
-class StyleMod(nn.Module):
+class StyleLayer(nn.Module):
     def __init__(self, latent_size, channels, use_wscale):
-        super(StyleMod, self).__init__()
+        super(StyleLayer, self).__init__()
         self.lin = LinearLayer(latent_size,
                             channels * 2,
                             gain=1.0, use_wscale=use_wscale)

@@ -1,3 +1,4 @@
+import blur_layer
 import conv_layer
 import linear_layer
 import noise_layer
