@@ -1,4 +1,4 @@
-from linearlayer import LinearLayer
+from src.layers.linear_layer import LinearLayer
 import torch.nn as nn
 
 class StyleMod(nn.Module):

@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from upscalelayer import Upscale2DLayer
+from src.layers.upscale_layer import Upscale2DLayer
 
 class Conv2DLayer(nn.Module):
     def __init__(self, input_channels, output_channels, kernel_size, gain=2**(0.5), use_wscale=False, lrmul=1, bias=True,

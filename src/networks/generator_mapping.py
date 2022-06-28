@@ -1,6 +1,8 @@
+import numpy as np
+import torch
 import torch.nn as nn
-from layers.pxlnormlayer import PixelNormLayer
-from layers.linearlayer import LinearLayer
+from src.layers.pxlnorm_layer import PixelNormLayer
+from src.layers.linear_layer import LinearLayer
 from collections import OrderedDict
 
 class GeneratorMapping(nn.Sequential):
@@ -32,4 +34,3 @@ class GeneratorMapping(nn.Sequential):
         x = super().forward(x)
         x = x.unsqueeze(1).expand(-1, 18, -1)
         return x
-

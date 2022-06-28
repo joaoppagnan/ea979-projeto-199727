@@ -1,4 +1,7 @@
-import convlayer
-import linearlayer
-import noiselayer
-import upscalelayer
+import conv_layer
+import linear_layer
+import noise_layer
+import pxlnorm_layer
+import style_layer
+import truncation_layer
+import upscale_layer
