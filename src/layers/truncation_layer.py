@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-class Truncation(nn.Module):
+class TruncationLayer(nn.Module):
     def __init__(self, avg_latent, max_layer=8, threshold=0.7):
         super().__init__()
         self.max_layer = max_layer
