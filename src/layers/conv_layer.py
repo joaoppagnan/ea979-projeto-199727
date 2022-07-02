@@ -1,3 +1,4 @@
+import numpy as np
 import torch
 import torch.nn as nn
 from src.layers.upscale_layer import Upscale2DLayer

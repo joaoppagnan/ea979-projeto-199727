@@ -1,3 +1,4 @@
+import numpy as np
 from src.layers.linear_layer import LinearLayer
 import torch.nn as nn
 

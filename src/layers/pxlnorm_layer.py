@@ -1,3 +1,4 @@
+import numpy as np
 import torch
 
 class PixelNormLayer(nn.Module):
