@@ -5,5 +5,5 @@ from src.utils.unzip_file import unzip_file
 def get_model(path:str, fname:str, url:str):
     os.makedirs(path, exist_ok=True)
     download_url(url, fname=fname)
-    unzip_file(filename=fname, destination=path)
+    unzip_file(fname=fname, destination=path)
     os.unlink(fname)
