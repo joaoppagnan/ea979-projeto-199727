@@ -1,5 +1,6 @@
 import numpy as np
 import torch
+import torch.nn as nn
 
 class PixelNormLayer(nn.Module):
     def __init__(self, epsilon=1e-8):
