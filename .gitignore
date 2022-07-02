@@ -5,5 +5,5 @@
 build/
 dist/
 references/
-data/raw/
-models/
+**/data/raw/
+**/models/
