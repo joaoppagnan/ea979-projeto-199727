@@ -1,1 +1,1 @@
-docker run --gpus all -it --rm  -e SHELL="/bin/bash" -p 8888:8888 -v `pwd`:/ea979-projeto ea979-projeto:latest python3.8 -m jupyterlab --allow-root --port 8888 --no-browser --ip='0.0.0.0' --NotebookApp.token='' --NotebookApp.password=''
+docker run --gpus all -it --rm  -e SHELL="/bin/bash" -p 8888:8888 -v `pwd`:/ea979-projeto ea979-projeto:latest python3.9 -m jupyterlab --allow-root --port 8888 --no-browser --ip='0.0.0.0' --NotebookApp.token='' --NotebookApp.password=''
