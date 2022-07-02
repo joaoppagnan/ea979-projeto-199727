@@ -1,3 +1,3 @@
-import layer_exit
-import input_block
-import synthesis_block
+from . import layer_exit
+from . import input_block
+from . import synthesis_block

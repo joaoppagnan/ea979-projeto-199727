@@ -1,2 +1,1 @@
-import get_data
-import get_pretrained_models
+from . import get_data

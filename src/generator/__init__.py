@@ -1,2 +1,2 @@
-import generator_mapping
-import generator_synthesis
+from . import generator_mapping
+from . import generator_synthesis

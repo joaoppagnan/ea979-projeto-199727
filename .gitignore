@@ -1,2 +1,7 @@
 # ignore these folders
+**/.ipynb_checkpoints/
+*__pycache__*
+.vscode/
+build/
+dist/
 references/

@@ -1,5 +1,5 @@
-import data
-import layers
-import blocks 
-import models
-import utils
+from . import data
+from . import layers
+from . import blocks 
+from . import models
+from . import utils
