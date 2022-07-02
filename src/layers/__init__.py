@@ -6,3 +6,4 @@ from . import pxlnorm_layer
 from . import style_layer
 from . import truncation_layer
 from . import upscale_layer
+from . import layer_out

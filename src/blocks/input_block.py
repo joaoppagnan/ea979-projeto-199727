@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
-from layers.linear_layer import LinearLayer
-from layers.conv_layer import Conv2DLayer
-from layer_exit import LayerExit
+from src.layers.layer_out import LayerOut
+from src.layers.linear_layer import LinearLayer
+from src.layers.conv_layer import Conv2DLayer
 
 class InputBlock(nn.Module):
     def __init__(self, nf, dlatent_size, const_input_layer, gain, use_wscale, use_noise, use_pixel_norm, use_instance_norm, use_styles, activation_layer):
@@ -14,9 +14,9 @@ class InputBlock(nn.Module):
             self.bias = nn.Parameter(torch.ones(nf))
         else:
             self.dense = LinearLayer(dlatent_size, nf*16, gain=gain/4, use_wscale=use_wscale)
-        self.epi1 = LayerExit(nf, dlatent_size, use_wscale, use_noise, use_pixel_norm, use_instance_norm, use_styles, activation_layer)
+        self.epi1 = LayerOut(nf, dlatent_size, use_wscale, use_noise, use_pixel_norm, use_instance_norm, use_styles, activation_layer)
         self.conv = Conv2DLayer(nf, nf, 3, gain=gain, use_wscale=use_wscale)
-        self.epi2 = LayerExit(nf, dlatent_size, use_wscale, use_noise, use_pixel_norm, use_instance_norm, use_styles, activation_layer)
+        self.epi2 = LayerOut(nf, dlatent_size, use_wscale, use_noise, use_pixel_norm, use_instance_norm, use_styles, activation_layer)
         
     def forward(self, dlatents_in_range):
         batch_size = dlatents_in_range.size(0)

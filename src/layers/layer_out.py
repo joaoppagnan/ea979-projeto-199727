@@ -4,7 +4,7 @@ from src.layers.pxlnorm_layer import PixelNormLayer
 from src.layers.style_layer import StyleLayer
 from collections import OrderedDict
 
-class LayerExit(nn.Module):
+class LayerOut(nn.Module):
     def __init__(self, channels, dlatent_size, use_wscale, use_noise, use_pixel_norm, use_instance_norm, use_styles, activation_layer):
         super().__init__()
         layers = []
