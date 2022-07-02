@@ -10,6 +10,7 @@ jupyterlab==3.0.6
 jupyter-client==6.1.11
 jupyter-core==4.7.1
 JLDracula==0.1.0
+matplotlib==3.3.4
 numpy==1.21.2
 Pillow==9.0.1
 scipy==1.6.3
