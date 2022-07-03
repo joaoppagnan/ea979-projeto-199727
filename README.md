@@ -59,7 +59,9 @@ A base mencionada consiste de setenta mil imagens de alta qualidade no formato *
 
 Grande parte do código foi retirado [deste](https://www.kaggle.com/code/songseungwon/image-generation-using-stylegan-pre-trained-model/notebook) *notebook* do **Kaggle**, mas foi feita uma grande adaptação nos códigos pois originalmente estes estavam em um único arquivo do **Jupyter** e, neste repositório, cada elemento da rede neural será um objeto de uma classe, o que facilita a modificação e correção de erros.
 
-Os *scripts* da StyleGAN estão no diretório `src/`, enquanto que os *notebooks* criados estão no diretório `notebooks`.
+Os *scripts* da StyleGAN estão no diretório `src/`, enquanto que os *notebooks* criados estão no diretório `notebooks/`. O arquivo [1.0-jpp-download-data.ipynb](https://github.com/joaoppagnan/ea979-projeto-199727/blob/main/notebooks/1.0-jpp-download-data.ipynb) serve para baixar as *thumbnails* das imagens utilizadas para treinar o modelo, o [1.0-jpp-download-pretrained.ipynb](https://github.com/joaoppagnan/ea979-projeto-199727/blob/main/notebooks/1.0-jpp-download-pretrained.ipynb) para fazer o *download* dos pesos do modelo pré-treinado e, por fim, o *notebook* [1.0-jpp-stylegan.ipynb](https://github.com/joaoppagnan/ea979-projeto-199727/blob/main/notebooks/1.0-jpp-stylegan.ipynb) é onde a geração de novas imagens é feita utilizando o código presente no `src/` e o modelo pré-treinado. 
+
+São gerados cinco conjuntos de nove faces, estando estes armazenados no diretório `figures/`. Além disso, há um outro conjunto no último *notebook* mencionado, mas estes não é salvo em um arquivo.
 
 ## Resultados Finais
 
