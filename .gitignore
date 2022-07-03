@@ -4,6 +4,5 @@
 .vscode/
 build/
 dist/
-references/
 **/data/raw/
 **/models/
