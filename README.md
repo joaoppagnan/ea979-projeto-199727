@@ -65,6 +65,23 @@ São gerados cinco conjuntos de nove faces, estando estes armazenados no diretó
 
 ## Resultados Finais
 
+Os seguintes conjuntos de nove faces foram gerados:
+
+#### Conjunto 1: ####
+![Conjunto 1](https://raw.githubusercontent.com/joaoppagnan/ea979-projeto-199727/main/figures/face-set-0.png)
+
+#### Conjunto 2: ####
+![Conjunto 2](https://raw.githubusercontent.com/joaoppagnan/ea979-projeto-199727/main/figures/face-set-1.png)
+
+#### Conjunto 3: ####
+![Conjunto 3](https://raw.githubusercontent.com/joaoppagnan/ea979-projeto-199727/main/figures/face-set-2.png)
+
+#### Conjunto 4: ####
+![Conjunto 4](https://raw.githubusercontent.com/joaoppagnan/ea979-projeto-199727/main/figures/face-set-3.png)
+
+#### Conjunto 5: ####
+![Conjunto 5](https://raw.githubusercontent.com/joaoppagnan/ea979-projeto-199727/main/figures/face-set-4.png)
+
 ## Discussão
 
 ## Referências Bibliográficas
