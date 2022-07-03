@@ -32,15 +32,7 @@ O objetivo principal deste trabalho é, como o nome já indica, realizar um estu
 
 Neste caso, vale mencionar que, o que será gerado pelo modelo ainda não está definido. Pode ser uma arte, um rosto humano, um animal etc.
 
-## Plano de Trabalho
-
-* Etapa 1 (2 semanas): Estudo de redes neurais artificiais adversárias generativas;
-* Etapa 2 (1 semana): Definição do tipo de imagem que será gerada pela rede e procura de bases de dados públicas para serem utilizadas;
-* Etapa 3 (3 semanas): Programação e testes com os modelos;
-* Etapa 4 (1 semana): Análise dos resultados obtidos;
-* Etapa 5 (2 semanas): Escrita do relatório final do projeto.
-
-## Atualização - Entrega 2
+### Atualização - Entrega 2
 
 Depois de uma busca na literatura, foi escolhido utilizar a [EditGAN](https://arxiv.org/pdf/2111.03186.pdf), para implementar este projeto. No caso, esta configuração de rede GAN permite a edição de alguns parâmetros das imagens sendo geradas (características como, caso estiver sendo gerados rostos, a direção para onde os olhos estão olhando, ou a expressão desejada) através de um reconhecimento semântico de um texto fornecido. 
 
@@ -48,7 +40,7 @@ Também foi escolhido gerar imagens de carros por serem mais simples que rostos.
 
 Infelizmente, ainda não foi possível iniciar a implementação do código desta configuração de GAN. Por sorte, o código utilizado pelos autores do artigo está no **Github** e a implementação foi feita em **Python** utilizando a biblioteca **PyTorch**.
 
-## Atualizações - Entrega 3
+### Atualizações - Entrega 3
 
 Houveram algumas atualizações entre a etapa 2 e a etapa 3: 
 
@@ -57,7 +49,21 @@ Houveram algumas atualizações entre a etapa 2 e a etapa 3:
 1. Originalmente planejava-se estudar como a edição de imagens pode ser feita através do espaço latente desta rede, mas, devido a falta de tempo, este objetivo foi descontinuado e o foco foi a geração de imagens sintéticas de forma aleatória;
 1. Além disso, as imagens que seriam geradas originalmente eram imagens de carros, porém, foi utilizada a proposta original da StyleGAN que era a de gerar rostos humanos.
 
-## Resultados
+## Abordagem Adotada
+
+Como dito na seção anterior, foi utilizada a primeira versão da StyleGAN, que é uma arquitetura de rede neural adversária generativa originalmente proposta em 2018 pelo NVlabs. Devido ao fato de que este é um modelo bem famoso, foram utilizados códigos já implementados através do pacote **PyTorch**. Neste caso a rede neural estará gerando faces humanas.
+
+O treinamento deste tipo de modelo é bem custoso computacionalmente. Devido a este fato, foi utilizado *transfer learning* de forma a usar um modelo já treinado, disponível [neste](https://www.kaggle.com/code/songseungwon/image-generation-using-stylegan-pre-trained-model/data?select=karras2019stylegan-ffhq-1024x1024.for_g_all.pt) *link*. O modelo foi treinado com a base de dados **Flickr-Faces-HQ**, disponível [neste](https://github.com/NVlabs/ffhq-dataset) repositório. 
+
+A base mencionada consiste de setenta mil imagens de alta qualidade no formato **PNG** na resolução de 1024x1024 de rostos humanos de homens e mulheres de diversas idades e etnias, podendo ou não conter acessórios como óculos, chapéus etc., retiradas do [Flickr](https://www.flickr.com/). Esta base foi construída para ser utilizada no artigo original da StyleGAN mas foi disponibilizada após a publicação do trabalho.
+
+Grande parte do código foi retirado [deste](https://www.kaggle.com/code/songseungwon/image-generation-using-stylegan-pre-trained-model/notebook) *notebook* do **Kaggle**, mas foi feita uma grande adaptação nos códigos pois originalmente este estava em um único arquivo do **Jupyter** e, neste repositório, cada elemento da rede neural será um objeto de uma classe, o que facilita a modificação e correção de erros.
+
+Os *scripts* da StyleGAN estão no diretório `src/`, enquanto que os *notebooks* criados estão no diretório `notebooks`
+
+## Resultados Finais
+
+## Discussão
 
 ## Referências Bibliográficas
 
