@@ -57,9 +57,9 @@ O treinamento deste tipo de modelo é bem custoso computacionalmente. Devido a e
 
 A base mencionada consiste de setenta mil imagens de alta qualidade no formato **PNG** na resolução de 1024x1024 de rostos humanos de homens e mulheres de diversas idades e etnias, podendo ou não conter acessórios como óculos, chapéus etc., retiradas do [Flickr](https://www.flickr.com/). Esta base foi construída para ser utilizada no artigo original da StyleGAN mas foi disponibilizada após a publicação do trabalho.
 
-Grande parte do código foi retirado [deste](https://www.kaggle.com/code/songseungwon/image-generation-using-stylegan-pre-trained-model/notebook) *notebook* do **Kaggle**, mas foi feita uma grande adaptação nos códigos pois originalmente este estava em um único arquivo do **Jupyter** e, neste repositório, cada elemento da rede neural será um objeto de uma classe, o que facilita a modificação e correção de erros.
+Grande parte do código foi retirado [deste](https://www.kaggle.com/code/songseungwon/image-generation-using-stylegan-pre-trained-model/notebook) *notebook* do **Kaggle**, mas foi feita uma grande adaptação nos códigos pois originalmente estes estavam em um único arquivo do **Jupyter** e, neste repositório, cada elemento da rede neural será um objeto de uma classe, o que facilita a modificação e correção de erros.
 
-Os *scripts* da StyleGAN estão no diretório `src/`, enquanto que os *notebooks* criados estão no diretório `notebooks`
+Os *scripts* da StyleGAN estão no diretório `src/`, enquanto que os *notebooks* criados estão no diretório `notebooks`.
 
 ## Resultados Finais
 
