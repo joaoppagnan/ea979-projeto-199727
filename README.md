@@ -50,9 +50,14 @@ Infelizmente, ainda não foi possível iniciar a implementação do código dest
 
 ## Atualizações - Entrega 3
 
-Houveram algumas atualizações entre a etapa 2 e a etapa 3:
-1. As tentativas iniciais de implementar a EditGAN não deram certo, mesmo com os pesos dos modelos pré-treinados. Devido a isso, optou-se por implementar a StyleGAN;
+Houveram algumas atualizações entre a etapa 2 e a etapa 3: 
 
+1. As tentativas iniciais de implementar a EditGAN não deram certo, mesmo com os pesos dos modelos pré-treinados. Devido a isso, optou-se por implementar a [StyleGAN](https://arxiv.org/pdf/1812.04948.pdf);
+1. Optou-se por implementar a primeira versão desta arquitetura de GANs;
+1. Originalmente planejava-se estudar como a edição de imagens pode ser feita através do espaço latente desta rede, mas, devido a falta de tempo, este objetivo foi descontinuado e o foco foi a geração de imagens sintéticas de forma aleatória;
+1. Além disso, as imagens que seriam geradas originalmente eram imagens de carros, porém, foi utilizada a proposta original da StyleGAN que era a de gerar rostos humanos.
+
+## Resultados
 
 ## Referências Bibliográficas
 
