@@ -63,6 +63,16 @@ Os *scripts* da StyleGAN estão no diretório `src/`, enquanto que os *notebooks
 
 São gerados cinco conjuntos de nove faces, estando estes armazenados no diretório `figures/`. Além disso, há um outro conjunto no último *notebook* mencionado, mas estes não é salvo em um arquivo.
 
+## Como reproduzir os resultados?
+
+Os resultados podem ser reproduzidos com os seguintes passos:
+1. Clonar o repositório;
+1. Executar a *script* `build_docker.sh` com o comando `sh build_docker.sh` para montar a imagem do Docker utilizada;
+1. Executar a *script* `run_docker.sh` com `sh run_docker.sh` para rodar a imagem e acessar o ambiente do **Jupyter Lab**;
+1. (OPCIONAL) Executar o *notebook* `1.0-jpp-download-data.ipynb` para baixar as *thumbnails* das imagens utilizadas para treinar o modelo;
+1. Executar o *notebook* `1.0-jpp-download-pretrained.ipynb` para fazer o *download* dos pesos do modelo pré-treinado;
+1. Executar o *notebook* `1.0-jpp-stylegan.ipynb` para gerar as imagens de rostos.
+
 ## Resultados Finais
 
 Os seguintes conjuntos de nove faces foram gerados:
