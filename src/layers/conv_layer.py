@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from src.layers.upscale_layer import Upscale2DLayer
 
 class Conv2DLayer(nn.Module):

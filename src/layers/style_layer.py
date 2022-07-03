@@ -10,8 +10,8 @@ class StyleLayer(nn.Module):
                             gain=1.0, use_wscale=use_wscale)
         
     def forward(self, x, latent):
-        style = self.lin(latent) # style => [batch_size, n_channels*2]
+        style = self.lin(latent) 
         shape = [-1, 2, x.size(1)] + (x.dim() - 2) * [1]
-        style = style.view(shape)  # [batch_size, 2, n_channels, ...]
+        style = style.view(shape)  
         x = x * (style[:, 0] + 1.) + style[:, 1]
         return x

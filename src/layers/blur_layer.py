@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 class BlurLayer(nn.Module):
     def __init__(self, kernel=[1, 2, 1], normalize=True, flip=False, stride=1):
@@ -17,7 +18,6 @@ class BlurLayer(nn.Module):
         self.stride = stride
     
     def forward(self, x):
-        # expand kernel channels
         kernel = self.kernel.expand(x.size(1), -1, -1, -1)
         x = F.conv2d(
             x,
