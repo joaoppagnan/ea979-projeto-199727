@@ -53,7 +53,7 @@ Houveram algumas atualizações entre a etapa 2 e a etapa 3:
 
 Como dito na seção anterior, foi utilizada a primeira versão da StyleGAN, que é uma arquitetura de rede neural adversária generativa originalmente proposta em 2018 pelo NVlabs. Devido ao fato de que este é um modelo bem famoso, foram utilizados códigos já implementados através do pacote **PyTorch**. Neste caso a rede neural estará gerando faces humanas.
 
-O treinamento deste tipo de modelo é bem custoso computacionalmente. Devido a este fato, foi utilizado *transfer learning* de forma a usar um modelo já treinado, disponível [neste](https://www.kaggle.com/code/songseungwon/image-generation-using-stylegan-pre-trained-model/data?select=karras2019stylegan-ffhq-1024x1024.for_g_all.pt) *link*. O modelo foi treinado com a base de dados **Flickr-Faces-HQ**, disponível [neste](https://github.com/NVlabs/ffhq-dataset) repositório. 
+O treinamento deste tipo de modelo é bem custoso computacionalmente. Devido a este fato, foi utilizada a abordagem de *transfer learning* de forma a usar um modelo já treinado, disponível [neste](https://www.kaggle.com/code/songseungwon/image-generation-using-stylegan-pre-trained-model/data?select=karras2019stylegan-ffhq-1024x1024.for_g_all.pt) *link*. O modelo foi treinado com a base de dados **Flickr-Faces-HQ**, disponível [neste](https://github.com/NVlabs/ffhq-dataset) repositório. Devido a este motivo, a rede neural só vai gerar rostos humanos. 
 
 A base mencionada consiste de setenta mil imagens de alta qualidade no formato **PNG** na resolução de 1024x1024 de rostos humanos de homens e mulheres de diversas idades e etnias, podendo ou não conter acessórios como óculos, chapéus etc., retiradas do [Flickr](https://www.flickr.com/). Esta base foi construída para ser utilizada no artigo original da StyleGAN mas foi disponibilizada após a publicação do trabalho.
 
@@ -83,6 +83,16 @@ Os seguintes conjuntos de nove faces foram gerados:
 ![Conjunto 5](https://raw.githubusercontent.com/joaoppagnan/ea979-projeto-199727/main/figures/face-set-4.png)
 
 ## Discussão
+
+Através da StyleGAN foi possível gerar, no total, 45 rostos humanos. O realismo e a acurácia das imagens em relação a faces reais varia consideravelmente: no conjunto 3 vê-se que o rosto da esquerda na linha do meio foi bem realista, enquanto que a imagem no canto inferior direito do primeiro conjunto ficou bem estranha pois parece que há um rosto se "desintegrando" no canto superior direito da imagem. Além disso, os fundos das imagens que os têm não estão muito bem definidos: no geral observa-se, quando há fundo, um borrão de cores. No geral, os elementos que ficam nos cantos das imagens não são muito bem gerados. 
+
+Para resolver estes problemas foram feitas atualizações na StyleGAN que melhoram significativamente os problemas observados nesta implementação.
+
+A principal dificuldade encontrada para implementar a EditGAN foi que, por tratar-se de um modelo proposto recentemente, não há exemplos de implementações realizadas a não ser a presente no repositório do **NVlabs** e houve uma grande dificuldade para utilizar aquele código. Enquanto isso, não houveram grandes dificuldades para implementar a StyleGAN.
+
+A abordagem de *transfer learning* utilizada possui uma limitação considerável de que este modelo só irá gerar rostos humanos. Caso queira-se gerar artes, faces animais, objetos, ou outras coisas, seria necessário realizar o *download* de um modelo treinado para gerar estes tipos de imagem. 
+
+Conclui-se que este projeto cumpriu o primeiro objetivo proposto, que é a computação gráfica através de redes neurais adversárias generativas, mas não foi possível alcançar a meta de estudar como modificações no espaço latente podem ser feitas de forma a editar as imagens geradas. Isto ocorreu pois um tempo considerável foi gasto tentando implementar a EditGAN, que seria uma GAN em que o grande diferencial dela seria uma edição mais simplificada do espaço latente de forma a alterar características da imagem.
 
 ## Referências Bibliográficas
 
