@@ -1,0 +1,89 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage{ragged2e}   %new code
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{varioref, babel}
+\usepackage{xmpmulti}
+\usepackage{epsfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{pbox}
+\usepackage{graphicx,url}
+\usepackage{etoolbox}
+\usepackage{ru,hyperref,url} % 
+\graphicspath{{../figures/}}
+\usepackage{indentfirst}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,fit, positioning, arrows.meta}
+\usetikzlibrary{backgrounds}
+\usepgflibrary{shapes.multipart}
+
+\addtobeamertemplate{block begin}{}{\justifying}
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamersize{text margin left = 1em}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}[text]
+
+\newcommand{\doingles}[1]{\footnote{Do inglês: \emph{#1}.}}
+
+
+\title{Computação Gráfica utilizando Redes Neurais Adversárias Generativas}
+
+\subtitle{Computer Graphics with Generative Adversarial Neural Networks}
+
+\author[João Pedro O. Pagnan]{ \footnotesize
+  Aluno: João Pedro de Oliveira Pagnan\\
+  Professor: Prof. Dr. José Wilson Magalhães Bassani [CEB/UNICAMP]\\\medskip
+  }
+
+\institute[]{Universidade Estadual de Campinas - Faculdade de Engenharia Elétrica e Computação\\
+  EA997 - Introdução à Engenharia Biomédica \\
+  }
+
+\date{\scriptsize \today}
+
+\renewcommand{\indent}{\hspace*{2em}}
+
+\begin{document}
+
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Introdução}
+\subsection{Identificação de doenças cardiovasculares com ferramentas de IA}
+\begin{frame}
+    \frametitle{Introdução}
+    \justifying 
+    \indent
+    
+    \indent{O diagnóstico de arritmias cardíacas através de sinais de eletrocardiograma (ECG) é de extrema importância para monitorar a saúde do coração através de um método não invasivo \cite{moody2001impact}. Devido a isso, uma boa etapa de interpretação de sinais computadorizados de ECG é fundamental para que o diagnóstico seja feito de forma precisa e, caso exista, a arritmia cardíaca seja detectada corretamente.}
+
+\end{frame}
+    
+\appendix
+
+\begin{frame}{Referências}
+    \tiny
+    \bibliography{bib}
+    \bibliographystyle{ieeetr}
+\end{frame}
+
+\begin{frame}[plain,c]
+    \begin{center}
+    \Huge Muito Obrigado!
+    \end{center}
+\end{frame}
+
+
+\end{document}

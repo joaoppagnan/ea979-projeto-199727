@@ -19,3 +19,4 @@ dist/
 *.bbl
 *.aux
 *.run.xml
+#*.tex
