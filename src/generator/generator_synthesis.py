@@ -35,7 +35,6 @@ class GeneratorSynthesis(nn.Module):
 
         act, gain = {'relu': (torch.relu, np.sqrt(2)),
                      'lrelu': (nn.LeakyReLU(negative_slope=0.2), np.sqrt(2))}[nonlinearity]
-        num_layers = resolution_log2 * 2 - 2
         blocks = []
         for res in range(2, resolution_log2 + 1):
             channels = nf(res-1)
@@ -53,8 +52,6 @@ class GeneratorSynthesis(nn.Module):
         self.blocks = nn.ModuleDict(OrderedDict(blocks))
         
     def forward(self, dlatents_in):
-        # Input: Disentangled latents (W) [minibatch, num_layers, dlatent_size].
-        # lod_in = tf.cast(tf.get_variable('lod', initializer=np.float32(0), trainable=False), dtype)
         for i, m in enumerate(self.blocks.values()):
             if i == 0:
                 x = m(dlatents_in[:, 2*i:2*i+2])

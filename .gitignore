@@ -6,3 +6,16 @@ build/
 dist/
 **/data/raw/
 **/models/
+
+# ignore these files
+*~
+*.out
+*.log
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.dvi
+*.blg
+*.bbl
+*.aux
+*.run.xml
